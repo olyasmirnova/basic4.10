@@ -1,0 +1,139 @@
+body{
+    font: 400 normal 16px/22px 'Open Sans', sans-serif;
+    margin: 0;
+    color: #333;
+    background: #fefefe;
+}
+.custom-form{
+    width:700px;
+    margin: 40px auto;
+}
+.form-row{
+    padding: 0 0 20px 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.checkbox{
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+.agree-check{
+    display: block;
+    padding: 5px 0 0 30px;
+    position: relative;
+}
+.agree-check::before{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border: 2px solid darkblue;
+    border-radius: 5px;
+}
+.agree-check::after{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left:2px;
+    width: 25px;
+    height: 10px;
+    border-bottom: 2px solid darkblue ;
+    border-left:  2px solid darkblue;
+    transform: rotate(-45deg);
+    opacity: 0;
+    transition: ease-in-out all 0.4s;
+}
+.checkbox:checked + .agree-check::after{
+    opacity: 1;
+}
+.choose-city{
+    margin: 0 30px 0 0;
+}
+.jcf-select{
+    position: relative;
+    border: 2px solid lightgreen;
+    border-radius: 6px;
+    width: 200px;
+    display: block;
+    padding: 5px 10px;
+    background: magenta;
+    color: azure;
+}
+.jcf-select-opener{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid lightcyan;
+    border-bottom: 2px solid lightcyan;
+    transform: rotate(-45deg);
+}
+.jcf-select-drop{
+    border: 2px solid lightgreen;
+    background: magenta;
+    border-radius: 6px;
+    color: azure;
+}
+.jcf-select-drop ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+.jcf-option{
+    display: block;
+    padding: 5px 10px;
+}
+.jcf-hover{
+    background: lightcoral;
+}
+.jcf-selected{
+    background: darkmagenta
+}
+.radio-button {
+	position: absolute;
+    height: 0;
+    width:0;
+	opacity: 0;
+	margin: 10px 0 0 20px;
+}
+.radio-button + label {
+	position: relative;
+	padding: 0 0 0 60px;
+	cursor: pointer;
+}
+.radio-button + label:before {
+	content: '';
+	position: absolute;
+	top: -4px;
+	left: 0;
+	width: 50px;
+	height: 26px;
+	border-radius: 13px;
+	background: #CDD1DA;
+	transition: 0.4s;
+}
+.radio-button + label:after {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: 2px;
+	width: 22px;
+	height: 22px;
+	border-radius: 10px;
+	background: black;
+	transition: 0.4s;
+}
+.radio-button:checked + label:before {
+	background: #9FD468;
+}
+.radio-button:checked + label:after {
+	left: 26px;
+}

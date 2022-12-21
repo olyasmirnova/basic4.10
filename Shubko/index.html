@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script  src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="  crossorigin="anonymous"></script>
+    <script src="js/jcf.js"></script>
+    <script src="js/jcf.select.js"></script>
+    <script src="js/jquery.main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/css.css">
+    <title>Custom Forms</title>
+</head>
+<body>
+    <form action="#" class="custom-form">
+        <div class="form-row">
+            <input class="checkbox" type="checkbox" name="" id="agree">
+            <label class="agree-check" for="agree">Yes, I agree</label>
+        </div>
+        <div class="form-row">
+            <label for="city" class="choose-city">Choose your city</label>
+            <select name="" id="city" data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false}'>
+                <option>Odessa</option>
+                <option>Kyiv</option>
+                <option>Lviv</option>
+                <option>Ivano-Frankovsk</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <input type="radio" class="radio-button" id="male" name="gender">
+            <label for="male">Male</label>
+        </div>
+        <div class="form-row">
+            <input type="radio" class="radio-button" id="female" name="gender">
+            <label for="female">Female</label>
+        </div>
+    </form>
+</body>
+</html>
