@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'island_momentsregular';
+    src: url('../font/islandmoments-regular_1-webfont.woff2') format('woff2'),
+         url('../font/islandmoments-regular_1-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    margin: 0;
+    color: #ffffff;
+    background-color: #ffffff;
+    font: 18px/22px 'island_momentsregular', sans-serif;
+}
+.nav{
+    margin: 0 auto;
+    background-color: #333333;
+    border-bottom: 5px solid #009eff;
+}
+.nav-list{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    text-transform: uppercase;
+    list-style: none; 
+}
+.nav-link{
+    display: block;
+    color: #cbcbcb;
+    text-decoration: none;
+    padding: 10px 20px; 
+}
+.nav-item:hover .nav-link,
+.nav-link:hover{
+    background: #009eff;
+    color: #fff;
+}
+.drop-item,
+.nav-item{
+    position: relative;
+}
+.has-drop::after{
+    content: "+";
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #cbcbcb;
+}
+.drop-item::after{
+    content: "+";
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    color: #cbcbcb;
+}
+.has-drop:hover::after{
+    color: #fff;
+}
+.drop-item:hover::after{
+    color: #fff;
+}
+.nav-item:hover::before{
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 5px;
+    width: 100%;
+}
+.drop-down{
+    margin: 5px 0 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    background: #009eff; 
+    opacity: 0;
+    pointer-events: none;
+    width: 200px;
+    transition: all ease-in-out 0.3s;
+}
+.drop-link{
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    border: 2px solid #0084ef;
+    padding: 10px 20px;
+    text-transform: capitalize;
+}
+.sub-link:hover,
+.drop-item:hover .drop-link,
+.drop-link:hover{
+    background: #00a9ff;
+}
+.nav-item:hover .drop-down{
+   opacity: 1;
+   pointer-events: auto;
+}
+.sub-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;  
+    text-transform: capitalize; 
+}
+.sub-link{
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #ffffff;
+    border: 2px solid #0084ef;
+}
+.sub-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    right: -198px;
+    top: 2px;
+    background: #009eff;
+    opacity: 0;
+    pointer-events: none;
+    width: 200px;
+    transition: all ease-in-out 0.3s;
+}
+.sub-item{
+    position: relative;
+}
+.drop-item:hover .sub-list{
+    opacity: 1;
+    pointer-events: auto;
+}
+.bord{
+    border-top: none;
+}
